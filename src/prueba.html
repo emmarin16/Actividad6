@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Clientes</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top fade-in">
+        <a class="navbar-brand" href="#">Perfumeria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--SECTION-->
+
+    <section class="container my-5 py-5">
+        <div class="container">
+            <center>
+                <h1 class="py-3">Listado de Clientes</h1>
+
+                <!-- Tabla de clientes -->
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">NOMBRE</th>
+                            <th scope="col">APELLIDO</th>
+                            <th scope="col">EMAIL</th>
+                            <th scope="col">ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaClientes">
+                        <!-- Aquí se mostrarán los clientes dinámicamente desde Node.js -->
+                    </tbody>
+                </table>
+            </center>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <!-- Script para cargar los clientes desde Node.js -->
+    <script>
+        fetch('/clientes')
+            .then(response => response.json())
+            .then(data => {
+                const listaClientes = document.getElementById('listaClientes');
+                listaClientes.innerHTML = ''; // Limpiar la lista
+                data.forEach(cliente => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <th scope="row">${cliente.id}</th>
+                        <td>${cliente.nombre}</td>
+                        <td>${cliente.apellido}</td>
+                        <td>${cliente.email}</td>
+                        <td>
+                            <a href="#" onclick="editarCliente(${cliente.id})" class="btn btn-primary">Editar</a>
+                            <a href="#" onclick="eliminarCliente(${cliente.id})" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    `;
+                    listaClientes.appendChild(row);
+                });
+            });
+
+        function editarCliente(id) {
+            // Agregar lógica para editar un cliente aquí
+            // Puedes redirigir a una página de edición o abrir un modal de edición
+        }
+
+        function eliminarCliente(id) {
+            // Agregar lógica para eliminar un cliente aquí
+            // Puedes mostrar un mensaje de confirmación y enviar la solicitud de eliminación a tu backend
+        }
+    </script>
+</body>
+
+</html>

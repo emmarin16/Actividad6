@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfumeria Con Amor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+
+ 
+
+    <!--NAVBAR-->
+    <div class="container-fluid  fixed-top" style="background-color:rgb(45, 151, 187);">
+
+        <!--modifica-->
+        <nav class="navbar navbar-expand-lg navbar-dark container" data-bs-theme="light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://i.pinimg.com/originals/59/c0/89/59c089ee5ab0cdd922afdff3c2cd54b4.png" alt="Logo" width="29" height="28" class="d-inline-block align-text-top">
+                    PERFUMERIA CON AMOR
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!--modifica-->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="misitio.html">Inicio</a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!--NAVBAR-->
+    </div>
+
+    <!--SECTION I-->
+
+    <!--SECTION-->
+
+    <section class="container my-5 py-5">
+
+        
+        <div class="container">
+
+
+        <center>
+        <h1 class="py-3 ">Listado de Usuarios</h1>
+
+
+            <a type="button" class="btn btn-success" th:href="@{/registrar}">Registrar Usuario</a>
+   
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">NOMBRE</th>
+                        <th scope="col">APELLIDO</th>
+                        <th scope="col">EMAIL</th>
+                        <th scope="col">ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="cliente : ${lstClientes}">
+                        <th scope="row" th:text="${cliente.id}">1</th>
+                        <td th:text="${cliente.nombre}"></td>
+                        <td th:text="${cliente.apellido}"></td>
+                        <td th:text="${cliente.email}"></td>
+                       
+                        
+                        <td>
+                        
+                        <a type="button" th:href="@{/update/{id}(id=${cliente.id})}" class="btn btn-primary">Actualizar</a>
+                        
+                        <a type="button" th:href="@{/delete/{id}(id=${cliente.id})}" class="btn btn-danger">Eliminar</a></td>
+
+
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </center>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top fade-in">
+    <a class="navbar-brand" href="#">Perfumeria</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="jumbotron text-center mt-3 fade-in">
+    <h1 class="display-4">CATALOGO</h1>
+    <p class="lead">Disfruta de nuestros mejores productos</p>
+  </header>
+
+
+
+  <div class="container slide-in">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="https://belcorpcolombia.vtexassets.com/arquivos/ids/932392-800-800?v=638272902631300000&width=800&height=800&aspect=true" class="card-img-top img-fluid" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Perfume Autentik</h5>
+            <p class="card-text">
+              Aroma: Dulce
+            </p>
+            <p class="card-text">
+              Tamaño: 45 ml
+            </p>
+            <p class="card-text">
+              Precio: $60.000
+            </p>
+            <button class="btn btn-warning" onclick="agregarP1()">Añadir al Carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="https://belcorpcolombia.vtexassets.com/arquivos/ids/932036-1600-auto?v=638272194136800000&width=1600&height=auto&aspect=true" class="card-img-top img-fluid" alt="Producto 2">
+          <div class="card-body">
+            <h5 class="card-title">Perfume Sweet Black</h5>
+            <p class="card-text">
+              Aroma: Dulce
+            </p>
+            <p class="card-text">
+              Tamaño: 50 ml
+            </p>
+            <p class="card-text">
+              Precio: $52.500
+            </p>
+            <button class="btn btn-warning" onclick="agregarP2()">Añadir al Carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="card mb-4">
+          <img src="https://belcorpcolombia.vtexassets.com/arquivos/ids/918704-1600-auto?v=638242497471270000&width=1600&height=auto&aspect=true" class="card-img-top img-fluid" alt="Producto 3">
+          <div class="card-body">
+            <h5 class="card-title">Perfume Prints</h5>
+            <p class="card-text">
+              Aroma: Oriental dulce
+            </p>
+            <p class="card-text">
+              Tamaño : 30 ml
+            </p>
+            <p class="card-text">
+              Precio: $50.000
+            </p>
+            <button class="btn btn-warning" onclick="agregarP3()">Añadir al Carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="card mb-4">
+          <img src="https://belcorpcolombia.vtexassets.com/arquivos/ids/913303-1600-auto?v=638242188853230000&width=1600&height=auto&aspect=true" class="card-img-top img-fluid" alt="Producto 3">
+          <div class="card-body">
+            <h5 class="card-title">Perfume Nitro</h5>
+            <p class="card-text">
+              Aroma: Herbal Aromático
+            </p>
+            <p class="card-text">
+              Tamaño : 100 ml
+            </p>
+            <p class="card-text">
+              Precio: $60.000
+            </p>
+            <button class="btn btn-warning" onclick="agregarP4()">Añadir al Carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="card mb-4">
+          <img src="https://belcorpcolombia.vtexassets.com/arquivos/ids/927296-1600-auto?v=638242759026230000&width=1600&height=auto&aspect=true" class="card-img-top img-fluid" alt="Producto 3">
+          <div class="card-body">
+            <h5 class="card-title">Perfume Blue & Blue For Him</h5>
+            <p class="card-text">
+              Aroma: Herbal Aromático
+            </p>
+            <p class="card-text">
+              Tamaño : 75 ml
+            </p>
+            <p class="card-text">
+              Precio: $60.000
+            </p>
+            <button class="btn btn-warning" onclick="agregarP5()">Añadir al Carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="card mb-4">
+          <img src="https://belcorpcolombia.vtexassets.com/arquivos/ids/926661-1600-auto?v=638242741182430000&width=1600&height=auto&aspect=true" class="card-img-top img-fluid" alt="Producto 3">
+          <div class="card-body">
+            <h5 class="card-title">Perfume Forze</h5>
+            <p class="card-text">
+              Aroma: Herbal Aromático
+            </p>
+            <p class="card-text">
+              Tamaño : 50 ml
+            </p>
+            <p class="card-text">
+              Precio: $72.000
+            </p>
+            <button class="btn btn-warning" onclick="agregarP6()">Añadir al Carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5 slide-in">
+
+      <!-- Aquí se mostrarán los elementos del carrito -->
+    </ul>
+
+    <div class="text-right mt-4">
+
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#popupModal">
+        Realizar compra
+      </button>
+    </div>
+  </div>
+  <div class="modal fade" id="popupModal" tabindex="-1" role="dialog" aria-labelledby="popupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="popupModalLabel">Mensaje importante</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Se ha realizado su compra.</p>
+          <p>Si no tiene productos añadidos a su carrito no se realizara su compra.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5 fade-in">
+    <p>Perfumeria &copy; 2023. Todos los derechos reservados.</p>
+  </footer>
+  <!--Script js-->
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
